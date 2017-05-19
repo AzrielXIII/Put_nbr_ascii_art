@@ -5,14 +5,16 @@
 ## Login   <thomas.domine-@epitech.eu>
 ##
 ## Started on  Fri May 19 13:05:51 2017 Thomas Dominé
-## Last update Fri May 19 13:11:52 2017 Thomas Dominé
+## Last update Fri May 19 14:45:46 2017 Thomas Dominé
 ##
 
 CC		=	gcc
 
-CFLAGS	=	-Werror -Wall -Wextra -I./include
+CFLAGS	=	-Werror -Wall -Wextra -I./include -g
 
-SRC		=	src/main.c	\
+SRC		=	src/main.c		\
+			src/tools.c		\
+			src/tools2.c	\
 
 OBJ		=	$(SRC:.c=.o)
 
