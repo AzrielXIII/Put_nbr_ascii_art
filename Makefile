@@ -5,7 +5,7 @@
 ## Login   <thomas.domine-@epitech.eu>
 ##
 ## Started on  Fri May 19 13:05:51 2017 Thomas Dominé
-## Last update Fri May 19 15:17:49 2017 Thomas Dominé
+## Last update Fri May 19 15:24:24 2017 Pierre Narcisi
 ##
 
 CC		=	gcc
@@ -16,6 +16,9 @@ SRC		=	src/main.c			\
 			src/tools.c			\
 			src/tools2.c		\
 			src/create_tab.c	\
+			src/handle.c		\
+			src/print_nb.c		\
+			src/print_nb2.c		\
 
 OBJ		=	$(SRC:.c=.o)
 

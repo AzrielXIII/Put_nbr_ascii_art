@@ -5,12 +5,12 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:14:08 2017 Pierre Narcisi
-** Last update Fri May 19 14:46:17 2017 Pierre Narcisi
+** Last update Fri May 19 15:21:50 2017 Pierre Narcisi
 */
 
 #include "my.h"
 
-t_nb_tab g_print[11] = {
+static t_nb_tab g_print[11] = {
   {0, print_0},
   {1, print_1},
   {2, print_2},
@@ -24,10 +24,10 @@ t_nb_tab g_print[11] = {
   {-1, NULL}
 };
 
-void print_space(char **tab)
+void	print_space(char **tab)
 {
-  int i;
-  int j;
+  int	i;
+  int	j;
 
   i = 0;
   while (i < 5)
@@ -40,22 +40,22 @@ void print_space(char **tab)
   i++;
 }
 
-void handle_nb(int *nb, char *str, int len)
+void	handle_nb(t_data *data)
 {
-  int i;
-  int j;
+  int	i;
+  int	j;
 
   j = 0;
-  while (j < len)
+  while (j < data->len)
     {
       i = 0;
-      while (g_print[i].nb != -1 && g_print[i] != nb[j])
+      while (g_print[i].nb != -1 && g_print[i] != fata->nb[j])
         i++;
-      if (str == NULL || nb[i] > my_strlen(str))
-        g_print[i].print("0");
+      if (str == NULL || data->nb[i] > my_strlen(data->str))
+        g_print[i].print("0", data->tab);
       else
-        g_print[i].print(str[nb[i]]);
-      if (j != len)
-        print_space(tab);
+        g_print[i].print(data->str[data->nb[i]], data->tab);
+      if (j != data->len)
+        print_space(data->tab);
     }
 }
