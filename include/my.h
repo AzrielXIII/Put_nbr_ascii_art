@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:06:59 2017 Pierre Narcisi
-** Last update Fri May 19 13:12:32 2017 Pierre Narcisi
+** Last update Fri May 19 13:39:51 2017 Pierre Narcisi
 */
 
 #ifndef _MY_H
@@ -14,7 +14,7 @@
 typedef struct s_nb_tab
 {
   int          nb;
-  void         (*print)(char c);
+  void         (*print)(char c, char **tab);
 }              t_nb_tab;
 
 #endif
