@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:06:59 2017 Pierre Narcisi
-** Last update Fri May 19 15:26:14 2017 Pierre Narcisi
+** Last update Fri May 19 15:30:01 2017 Pierre Narcisi
 */
 
 #ifndef _MY_H
@@ -19,10 +19,10 @@ typedef struct s_nb_tab
 {
   int          nb;
   void         (*print)(char c, char **tab);
-  {
 }              t_nb_tab;
 
 typedef	struct	s_data
+{
 	int			len;
 	int			*nb;
 	char		*str;
@@ -67,5 +67,10 @@ void	print_6(char c, char **tab);
 void	print_7(char c, char **tab);
 void	print_8(char c, char **tab);
 void	print_9(char c, char **tab);
+
+/*
+handle.c
+*/
+void	handle_nb(t_data *data);
 
 #endif

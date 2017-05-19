@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:14:08 2017 Pierre Narcisi
-** Last update Fri May 19 15:21:50 2017 Pierre Narcisi
+** Last update Fri May 19 15:36:57 2017 Pierre Narcisi
 */
 
 #include "my.h"
@@ -36,8 +36,8 @@ void	print_space(char **tab)
       while (tab[i][j] != '\0')
         j++;
       tab[i][j] = ' ';
+      i++;
     }
-  i++;
 }
 
 void	handle_nb(t_data *data)
@@ -49,13 +49,17 @@ void	handle_nb(t_data *data)
   while (j < data->len)
     {
       i = 0;
-      while (g_print[i].nb != -1 && g_print[i] != fata->nb[j])
-        i++;
-      if (str == NULL || data->nb[i] > my_strlen(data->str))
-        g_print[i].print("0", data->tab);
+      while (g_print[i].nb != -1 && g_print[i].nb != data->nb[j])
+        {
+          i++;
+
+        }
+      if (data->str == NULL || data->nb[i] > my_strlen(data->str))
+        g_print[i].print('0', data->tab);
       else
         g_print[i].print(data->str[data->nb[i]], data->tab);
       if (j != data->len)
         print_space(data->tab);
+      j++;
     }
 }

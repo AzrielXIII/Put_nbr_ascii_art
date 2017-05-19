@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 14:48:48 2017 Pierre Narcisi
-** Last update Fri May 19 15:09:24 2017 Pierre Narcisi
+** Last update Fri May 19 15:32:40 2017 Pierre Narcisi
 */
 
 void	print_5(char c, char **tab)
@@ -104,8 +104,7 @@ void	print_8(char c, char **tab)
 	k++;
       while (j < 5)
 	{
-	  if ((i == 0 || i == 2 || i == 4) && (j != 0 && j != 4)
-	      || ((i == 1 || i == 3) && (j == 0 || j == 4)))
+	  if ((i == 0 || i == 2 || i == 4) || (j != 0 && j != 4) || ((i == 1 || i == 3) && (j == 0 || j == 4)))
 	    tab[i][j + k] = c;
 	  else
 	    tab[i][j + k] = ' ';

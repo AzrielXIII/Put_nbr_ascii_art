@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri May 19 13:10:12 2017 Thomas Dominé
-** Last update Fri May 19 15:22:08 2017 Thomas Dominé
+** Last update Fri May 19 15:36:37 2017 Pierre Narcisi
 */
 
 #include "my.h"
@@ -89,6 +89,7 @@ int			main(int ac, char **av)
 	}
 	if (create_tab(data) == 84)
 		return (84);
+	handle_nb(data);
 	my_free_struct(data);
 	return (0);
 }
