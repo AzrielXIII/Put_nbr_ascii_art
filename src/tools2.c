@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri May 19 13:58:36 2017 Thomas Dominé
-** Last update Fri May 19 15:32:06 2017 Thomas Dominé
+** Last update Fri May 19 15:41:03 2017 Thomas Dominé
 */
 
 #include "my.h"
@@ -35,6 +35,8 @@ int			print_tab(char **tab)
 	while (tab[i] != NULL)
 	{
 		if (my_putstr(tab[i]) == 84)
+			return (84);
+		if (my_putchar('\n') == 84)
 			return (84);
 		i += 1;
 	}
