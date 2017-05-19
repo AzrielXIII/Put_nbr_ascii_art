@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:06:59 2017 Pierre Narcisi
-** Last update Fri May 19 15:30:01 2017 Pierre Narcisi
+** Last update Fri May 19 15:39:31 2017 Pierre Narcisi
 */
 
 #ifndef _MY_H
@@ -43,6 +43,7 @@ int		my_strcmp(char *str, char *compare);
 tool2.c
 */
 char	*my_strcpy(char *str);
+int			print_tab(char **tab);
 void	my_free_struct(t_data *data);
 
 /*
