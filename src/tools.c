@@ -5,68 +5,68 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri May 19 13:23:58 2017 Thomas Dominé
-** Last update Fri May 19 15:31:43 2017 Thomas Dominé
+** Last update Fri May 19 16:28:23 2017 Azriel
 */
 
 #include "my.h"
 
-int			my_putchar(char c)
+int	my_putchar(char c)
 {
-	if (write(1, &c, 1) == - 1)
-		return (84);
-	return (0);
+  if (write(1, &c, 1) == - 1)
+    return (84);
+  return (0);
 }
 
-int			my_putstr(char *str)
+int	my_putstr(char *str)
 {
-	int		i;
+  int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (my_putchar(str[i]) == 84)
-			return (84);
-		i += 1;
+  i = 0;
+  while (str[i] != '\0')
+    {
+      if (my_putchar(str[i]) == 84)
+	return (84);
+      i += 1;
+    }
+  return (0);
+}
+
+int	my_strlen(char *str)
+{
+  int	i;
+
+  i = 0;
+  while (str[i] != '\0')
+    i += 1;
+  return (i);
+}
+
+int	my_isnum(char *str)
+{
+  int	i;
+
+  i = 0;
+  while (str[i] != '\0')
+    {
+      if (str[i] < '0' || str[i] > '9')
+	return (1);
+      i += 1;
 	}
-	return (0);
+  return (0);
 }
 
-int			my_strlen(char *str)
+int	my_strcmp(char *str, char *compare)
 {
-	int		i;
+  int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i += 1;
-	return (i);
-}
-
-int			my_isnum(char *str)
-{
-	int		i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (1);
-		i += 1;
-	}
-	return (0);
-}
-
-int			my_strcmp(char *str, char *compare)
-{
-	int		i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] != compare[i])
-			return (1);
-		i += 1;
-	}
-	if (compare[i] != '\0')
-		return (1);
-	return (0);
+  i = 0;
+  while (str[i] != '\0')
+    {
+      if (str[i] != compare[i])
+	return (1);
+      i += 1;
+    }
+  if (compare[i] != '\0')
+    return (1);
+  return (0);
 }

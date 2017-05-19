@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:06:59 2017 Pierre Narcisi
-** Last update Fri May 19 15:39:31 2017 Pierre Narcisi
+** Last update Fri May 19 16:24:28 2017 Thomas Dominé
 */
 
 #ifndef _MY_H
@@ -28,7 +28,6 @@ typedef	struct	s_data
 	char		*str;
 	char		**tab;
 }				t_data;
-
 
 /*
 tools.c
