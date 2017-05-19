@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri May 19 13:23:58 2017 Thomas Dominé
-** Last update Fri May 19 13:38:06 2017 Thomas Dominé
+** Last update Fri May 19 15:31:43 2017 Thomas Dominé
 */
 
 #include "my.h"
@@ -13,7 +13,7 @@
 int			my_putchar(char c)
 {
 	if (write(1, &c, 1) == - 1)
-		return (1);
+		return (84);
 	return (0);
 }
 
@@ -24,8 +24,8 @@ int			my_putstr(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (my_putchar(str[i]) == -1)
-			return (1);
+		if (my_putchar(str[i]) == 84)
+			return (84);
 		i += 1;
 	}
 	return (0);
