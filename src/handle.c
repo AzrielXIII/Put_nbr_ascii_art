@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:14:08 2017 Pierre Narcisi
-** Last update Fri May 19 16:13:04 2017 Thomas Dominé
+** Last update Fri May 19 16:14:45 2017 Thomas Dominé
 */
 
 #include "my.h"
@@ -51,11 +51,8 @@ void	handle_nb(t_data *data)
       i = 0;
       while (g_print[i].nb != -1 && g_print[i].nb != data->nb[j])
           i++;
-      if (data->str != NULL && data->nb[i] <= my_strlen(data->str))
-      {
-        my_putstr(data->str);
-        g_print[i].print(data->str[data->nb[i]], data->tab);
-      }
+      if (data->str != NULL && g_print[i].nb <= my_strlen(data->str))
+        g_print[i].print(data->str[g_print[i].nb], data->tab);
       else
         g_print[i].print('0', data->tab);
       if (j != data->len - 1)
