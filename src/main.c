@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri May 19 13:10:12 2017 Thomas Dominé
-** Last update Fri May 19 14:57:39 2017 Thomas Dominé
+** Last update Fri May 19 15:18:52 2017 Thomas Dominé
 */
 
 #include "my.h"
@@ -87,5 +87,7 @@ int			main(int ac, char **av)
 			return (84);
 		i += 1;
 	}
+	if (create_tab(data) == 84)
+		return (84);
 	return (0);
 }

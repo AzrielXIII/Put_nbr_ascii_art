@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:06:59 2017 Pierre Narcisi
-** Last update Fri May 19 14:04:12 2017 Thomas Dominé
+** Last update Fri May 19 15:16:05 2017 Thomas Dominé
 */
 
 #ifndef _MY_H
@@ -18,7 +18,7 @@
 typedef struct s_nb_tab
 {
   int          nb;
-  void         (*print)(char c);
+  void         (*print)(char c, char **tab);
 }              t_nb_tab;
 
 typedef	struct	s_data
@@ -29,7 +29,6 @@ typedef	struct	s_data
 	char		**tab;
 }				t_data;
 
-#endif
 
 /*
 tools.c
@@ -44,3 +43,10 @@ int		my_strcmp(char *str, char *compare);
 tool2.c
 */
 char	*my_strcpy(char *str);
+
+/*
+create_tab.c
+*/
+int		create_tab(t_data *data);
+
+#endif
