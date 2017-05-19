@@ -57,7 +57,7 @@ void	print_6(char c, char **tab)
 	  j++;
 	}
       i++;
-  }
+    }
   tab[1][0 + k] = c;
   tab[2][0 + k] = c;
   tab[3][4 + k] = c;
@@ -105,14 +105,14 @@ void	print_8(char c, char **tab)
       while (j < 5)
 	{
 	  if (((i % 2 == 0) && (j >= 1 && j <= 3)) ||
-	  ((i % 2 != 0) && (j == 0 || j == 4)))
+	      ((i % 2 != 0) && (j == 0 || j == 4)))
 	    tab[i][j + k] = c;
 	  else
 	    tab[i][j + k] = ' ';
-	   j++;
-	 }
+	  j++;
+	}
       i++;
-  }
+    }
 }
 
 void	print_9(char c, char **tab)

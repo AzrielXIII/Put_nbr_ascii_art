@@ -10,28 +10,28 @@
 
 #include "my.h"
 
-int			create_tab(t_data *data)
+int	create_tab(t_data *data)
 {
-	int		x;
-	int		y;
-	int		nb_cols;
-
-	y = 0;
-	nb_cols = data->len * 5 + data->len;
-	if (!(data->tab = malloc(sizeof(char *) * (5 + 1))))
-		return (84);
-	while (y < 5)
+  int	x;
+  int	y;
+  int	nb_cols;
+  
+  y = 0;
+  nb_cols = data->len * 5 + data->len;
+  if (!(data->tab = malloc(sizeof(char *) * (5 + 1))))
+    return (84);
+  while (y < 5)
+    {
+      if (!(data->tab[y] = malloc(sizeof(char) * nb_cols)))
+	return (84);
+      x = 0;
+      while (x < nb_cols)
 	{
-		if (!(data->tab[y] = malloc(sizeof(char) * nb_cols)))
-			return (84);
-		x = 0;
-		while (x < nb_cols)
-		{
-			data->tab[y][x] = '\0';
-			x += 1;
-		}
-		y += 1;
+	  data->tab[y][x] = '\0';
+	  x += 1;
 	}
-	data->tab[y] = NULL;
-	return (0);
+      y += 1;
+    }
+  data->tab[y] = NULL;
+  return (0);
 }
