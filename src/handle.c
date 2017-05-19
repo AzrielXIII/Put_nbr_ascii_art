@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:14:08 2017 Pierre Narcisi
-** Last update Fri May 19 15:36:57 2017 Pierre Narcisi
+** Last update Fri May 19 15:50:45 2017 Pierre Narcisi
 */
 
 #include "my.h"
@@ -58,7 +58,7 @@ void	handle_nb(t_data *data)
         g_print[i].print('0', data->tab);
       else
         g_print[i].print(data->str[data->nb[i]], data->tab);
-      if (j != data->len)
+      if (j != data->len - 1)
         print_space(data->tab);
       j++;
     }
