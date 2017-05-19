@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri May 19 13:58:36 2017 Thomas Dominé
-** Last update Fri May 19 14:42:53 2017 Thomas Dominé
+** Last update Fri May 19 15:22:43 2017 Thomas Dominé
 */
 
 #include "my.h"
@@ -25,4 +25,20 @@ char		*my_strcpy(char *str)
 	}
 	tmp[i] = '\0';
 	return (tmp);
+}
+
+void		my_free_struct(t_data *data)
+{
+	int		i;
+
+	i = 0;
+	while (data->tab[i] != NULL)
+	{
+		free(data->tab[i]);
+		i += 1;
+	}
+	free(data->tab);
+	free(data->nb);
+	free(data->str);
+	free(data);
 }
