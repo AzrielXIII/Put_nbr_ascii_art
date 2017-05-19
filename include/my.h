@@ -5,7 +5,7 @@
 ** Login   <pierre.nacisi@epitech.eu>
 **
 ** Started on  Fri May 19 13:06:59 2017 Pierre Narcisi
-** Last update Fri May 19 15:16:05 2017 Thomas Dominé
+** Last update Fri May 19 15:23:32 2017 Pierre Narcisi
 */
 
 #ifndef _MY_H
@@ -48,5 +48,23 @@ char	*my_strcpy(char *str);
 create_tab.c
 */
 int		create_tab(t_data *data);
+
+/*
+print_nb.c
+*/
+void	print_0(char c, char **tab);
+void	print_1(char c, char **tab);
+void	print_2(char c, char **tab);
+void	print_3(char c, char **tab);
+void	print_4(char c, char **tab);
+
+/*
+print_nb.c
+*/
+void	print_5(char c, char **tab);
+void	print_6(char c, char **tab);
+void	print_7(char c, char **tab);
+void	print_8(char c, char **tab);
+void	print_9(char c, char **tab);
 
 #endif
