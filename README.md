@@ -1,6 +1,6 @@
 # Put_nbr_ascii_art
 
-for use:
+to use:
 
 str1 -> string with only Digital character
 
